@@ -17,7 +17,7 @@ on the business logic of your views and models.
 Use it to decorate your views, to provide all the basis so for Backbone to initialise it.
 
 #### Usage
-`
+```
 @BackboneViewProperties({  
     events: {  
         "click button.save": "save"  
@@ -29,7 +29,7 @@ export class LittleChildView extends BaseView<Person>{
         this.model.save();  
     }  
 }
-`
+```
 
 The annotations take a single argument which is a `BackboneViewOptions`.
 Here are the properties, note that they are all optionnal:
@@ -58,14 +58,14 @@ Which means you can now do `console.log(myModel.value)` and under the hood it wi
 `console.log(myModel.get("value");` and `myModel.value = 42` will do `myModel.set("value",42)`.
 
 #### usage
-`
+```
 class Person extends Model {  
     @BackboneModelAttribute()  
     firstName:string;  
     @BackboneModelAttribute()  
     lastName:string;  
 }
-`
+```
 
 Inside the `@BackboneModelAttribute()` you can optionnaly pass a string which will be used as the attribute 
 name in your Backbone model. If none is provided, the property name is used as the attribute name.
