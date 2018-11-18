@@ -1,0 +1,27 @@
+{
+  "name": "backbone-ts-decorators",
+  "version": "1.0.0",
+  "description": "This library provides Typescript decorators to ease your use of Backbones with Typescript.",
+  "main": "lib/dist/index.js",
+  "types":"lib/dist/index.d.ts",
+  "directories": {
+    "example": "example",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "buildAll": "npm run buildLib && npm run buildExample",
+    "buildLib": "cd ./lib && tsc",
+    "buildExample": "cd ./example && tsc && webpack"
+  },
+  "author": "Vincent Francolin",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/backbone": "^1.3.43",
+    "backbone": "^1.3.3",
+    "jquery": "^3.3.1",
+    "typescript": "^3.1.6",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
+  }
+}
