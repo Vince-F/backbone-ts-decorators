@@ -18,36 +18,36 @@ Use it to decorate your views, to provide all the basis so for Backbone to initi
 
 #### Usage
 `
-@BackboneViewProperties({
-    events: {
-        "click button.save": "save"
-    },
-    template: template
-})
-export class LittleChildView extends BaseView<Person>{
-    save() {
-        this.model.save();
-    }
+@BackboneViewProperties({  
+    events: {  
+        "click button.save": "save"  
+    },  
+    template: template  
+})  
+export class LittleChildView extends BaseView<Person>{  
+    save() {  
+        this.model.save();  
+    }  
 }
 `
 
 The annotations take a single argument which is a `BackboneViewOptions`.
 Here are the properties, note that they are all optionnal:
-* template __type: (...args:any[]) => string__
+* template __type: (...args:any[]) => string__  
 The function the view will use to generate the HTML. As defined in Backbone documentation,
 it's to enforce convention, but it's up to you to implement the render function and call it
 in your fashion.
-* events __type: { [key:string]:string }__
+* events __type: { [key:string]:string }__  
 The hash of events your view will handle. Note that for now, there is no inheritance on events.
 So if you have a view that inherits from another and also defines its own events, you'll need to 
 declare again parent's view events if you need them. Maybe an inheritance mechanism will be implemented later.
-* tagName __type: string__
+* tagName __type: string__  
 The DOM element which will be the root element of your View.
-* className __type: string__
+* className __type: string__  
 The class that will be append to your View element.
-* id __type: string__
+* id __type: string__  
 The DOM id your view will have in the DOM.
-* el __type: string__
+* el __type: string__  
 DOM element to which your view will be attached.
  
 ### BackboneModelAttribute
@@ -59,11 +59,11 @@ Which means you can now do `console.log(myModel.value)` and under the hood it wi
 
 #### usage
 `
-class Person extends Model {
-    @BackboneModelAttribute()
-    firstName:string;
-    @BackboneModelAttribute()
-    lastName:string;
+class Person extends Model {  
+    @BackboneModelAttribute()  
+    firstName:string;  
+    @BackboneModelAttribute()  
+    lastName:string;  
 }
 `
 
