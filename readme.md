@@ -1,4 +1,4 @@
-# backbone-ts-annotations
+# backbone-ts-decorators
 
 ## Purpose
 This library provides Typescript decorators to ease your use of Backbones with Typescript.
